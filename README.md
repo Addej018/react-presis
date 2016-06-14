@@ -2,7 +2,9 @@
 
 ### Förutsättningar 
 Är att du har node installera på din dator.
-Om du inte har node installera kan du ladda ner det på den här länken (https://nodejs.org/en/) 
+Om du inte har node installera kan du ladda ner det på den här länken https://nodejs.org/en/
+
+Bra om du har någon form av
 
 ### Kom igång
  

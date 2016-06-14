@@ -1,10 +1,16 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import ProductTable from './ProductTable';
 import ProductForm from './ProductForm';
 import * as productApi from '../api/productApi';
+import {product} from '../api/product';
+import * as styles from './base.css';
 
 
-export default class ProductListingPage extends Component {
+interface State {
+  products:product []
+}
+
+export default class ProductListingPage extends React.Component<any,State> {
   constructor(props) {
     super(props);
 
@@ -27,7 +33,7 @@ export default class ProductListingPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <h1>Products</h1>
         <ProductTable products={this.state.products} />
         <ProductForm handleSubmit={(product) => this.handleSubmit(product) } />

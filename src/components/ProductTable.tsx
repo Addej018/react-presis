@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import * as styles from './base.css';
 
 const ProductRow = ({product}) => (
   <tr>
@@ -16,7 +17,7 @@ const ProductRow = ({product}) => (
 
 
 const ProductTable = ({products}) => (
-  <table>
+  <table className={styles.table}>
     <thead>
       <tr>
         <th>

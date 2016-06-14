@@ -1,7 +1,12 @@
-import React from 'react';
+import * as React from 'react';
+import {product} from '../api/product';
+import * as styles from './base.css';
 
+interface State {
+    product: product;
+}
 
-export default class ProductForm extends React.Component {
+export default class ProductForm extends React.Component<any,State> {
 
     constructor(props) {
         super(props);
@@ -19,27 +24,26 @@ export default class ProductForm extends React.Component {
         event.preventDefault();
         
         this.props.handleSubmit(this.state.product);
-        this.setState({ product: {} })
     }
     render() {
         return (
-            <form onSubmit={(e) => this.handleSubmit(e) }>
-                <div>
-                    Product name
+            <form onSubmit={(e) => this.handleSubmit(e) } className={styles.form}>
+                <label>
+                   <span> Product name </span>
                     <input
                         type='text'
                         value={this.state.product.name}
-                        onChange={(e) => this.handleProductChange({ name: e.target.value }) }
+                        onChange={(e) => this.handleProductChange({ name: (e.target as HTMLInputElement).value }) }
                         />
-                </div>
-                <div>
+                </label>
+                <label>
                     Product size
                     <input
                         type='text'
                         value={this.state.product.size}
-                        onChange={(e) => this.handleProductChange({ size: e.target.value }) }
+                        onChange={(e) => this.handleProductChange({size: (e.target as HTMLInputElement).value}) }
                         />
-                </div>
+                </label>
                 <input
                     type='submit'
                     value='Lägg till product'
@@ -48,8 +52,3 @@ export default class ProductForm extends React.Component {
         )
     }
 }
-
-
-ProductForm.propTypes = {
-    handleSubmit: React.PropTypes.func.isRequired
-};
