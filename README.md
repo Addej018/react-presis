@@ -23,12 +23,13 @@ npm start
 6. Kolla i webläsaren så att din produkt tabell renderas ut. 
 
 #### Skapa ett produkt formulär som kan lägga till fler produkter. 
-1. Skapa en ny stateful komponent i filen ProductForm.js. 
-2. Sätt upp ett state i ProductForm för att hålla forumlärdatan. 
-3. Skapa en funktion för att uppdatera state på produkten när forumläret ändras. 
-4. Lägg till en funktion i ProductListingPage som lägger till den nya produkten i productApi.
-5. Skicka ner den funktion via props till ProductForm.
-6. Skapa en funktion i ProductForm för att hantera on submit. 
-7. I funktion för on submit anropa du fått via props för att lägga till en ny produkt.  
+1. Sätt upp ett state i ProductForm för att hålla forumlärdatan. 
+2. Sätt upp ett formulär för all product data. 
+2. Skapa en funktion för att uppdatera state på produkten när forumläret ändras. 
+3. Lägg till en funktion i ProductListingPage som lägger till den nya produkten i productApi.
+4. Skicka ner den funktion via props till ProductForm.
+5. Skapa en funktion i ProductForm för att hantera on submit. 
+6. I funktion för on submit anropa den funktion du fått via props för att lägga till en ny produkt.  
+
 
 Tips är att kolla på https://facebook.github.io/react/docs/tutorial.html
